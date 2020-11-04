@@ -1,40 +1,40 @@
 \documentclass[11pt]{charter}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Sistema de control y monitoreo de riego } 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
-%\posgrado{Carrera de Especialización en Sistemas Embebidos} 
-\posgrado{Carrera de Especialización en Internet de las Cosas} 
+\posgrado{Carrera de Especialización en Sistemas Embebidos} 
+%\posgrado{Carrera de Especialización en Internet de las Cosas} 
 %\posgrado{Carrera de Especialización en Intelegencia Artificial}
 %\posgrado{Maestría en Sistemas Embebidos} 
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Nombre del Autor} 
+\autor{Ariel Alejandro Cerfoglia} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Esp.Ing.Nelson Ariel Fortunatti}
+\pertenenciaDirector{ITBA, UBA, UNLP} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
-\codirector{} % si queda vacio no se deberíá incluir 
-\pertenenciaCoDirector{}
+%\codirector{} % si queda vacio no se deberíá incluir 
+%\pertenenciaCoDirector{}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Prof. Mg. Ing. Osvaldo P. Ivani}
+\empresaCliente{Smartium S.A}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
-\juradoUno{Nombre y Apellido (1)}
-\pertenenciaJurUno{pertenencia (1)} 
-\juradoDos{Nombre y Apellido (2)}
-\pertenenciaJurDos{pertenencia (2)}
-\juradoTres{Nombre y Apellido (3)}
-\pertenenciaJurTres{pertenencia (3)}
+%\juradoUno{Nombre y Apellido (1)}
+%\pertenenciaJurUno{pertenencia (1)} 
+%\juradoDos{Nombre y Apellido (2)}
+%\pertenenciaJurDos{pertenencia (2)}
+%\juradoTres{Nombre y Apellido (3)}
+%\pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{25 de agosto de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlanificacion{13 de octubre de 2020} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{22 de agosto de 2021}		%Fecha de defensa pública del trabajo final
+\fechaINICIO{23 de octubre de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlanificacion{11 de diciembre de 2020} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{19 de Octubre de 2021}		%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -62,12 +62,12 @@
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
-1.0      & Creación del documento                                          & 27/06/2020 \\ \hline
-1.1      & Avances en alguna cosa                                          & dd/mm/aaaa \\ \hline
-1.2      & Otro ejemplo \newline
-		   Con texto partido \newline
-		   En varias líneas \newline
-		   A propósito                                                     & dd/mm/aaaa \\ \hline
+1.0      & Creación del documento                                          & 23/10/2020 \\ \hline
+%1.1      & Avances en alguna cosa                                          & dd/mm/aaaa \\ \hline
+%1.2      & Otro ejemplo \newline
+%		   Con texto partido \newline
+%		   En varias líneas \newline
+%		   A propósito                                                     & dd/mm/aaaa \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -84,7 +84,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de control de temperatura de un calefón, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo de un sistema de control y monitoreo de riego, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -107,54 +107,77 @@ Se adjunta a esta acta la planificación inicial.
 \section{Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red}
-El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
-Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+\begin{consigna}{black}
+%El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
+%Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+%Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
 
-\begin{itemize}
-\item ¿Cómo se vincula este proyecto con la misión de la organización?
-\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
-\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
-\item ¿Cuales son las necesidades que debe satisfacer?
-\item ¿Por dónde pasa la innovación?
-\end{itemize}
+%\begin{itemize}
+%\item ¿Cómo se vincula este proyecto con la misión de la organización?
+%\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
+%\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
+%\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
+%\item ¿Cuales son las necesidades que debe satisfacer?
+%\item ¿Por dónde pasa la innovación?
+%\end{itemize}
 
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+%La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+
+La revolución 4.0 es una realidad cada vez más cercana. El mercado del internet de las cosas crece a ritmos acelerados, permitiendo la conectividad de cada vez más dispositivos. El sector agropecuario no ha sido ajeno a estos cambios, y en los recientes años, hemos sido testigos del surgimiento de un creciente número de empresas agtech, empresas vinculadas a la tecnología para la agricultura.
+
+Este proyecto pretende realizar un sistema de control y monitoreo de riego que sea incorporado a un sistema de monitoreo preexistente de una empresa agtech; ampliando así su funcionalidad y brindando al productor agropecuario un mejor manejo del agua en sus cultivos. 
+
+El sistema se comunicará de forma inalámbrica con un servidor en la empresa, pudiendo recibir  y transmitir datos desde y hacia el mismo, respectivamente. El protocolo utilizado en dicha comunicación será el protocolo LoRa, caracterizado por su eficiencia para transmitir información a largas distancias y con baja potencia; resultando especialmente útil en zonas sin cobertura celular.
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.7\textwidth]{./Figuras/redLora.png}
+\caption{Estructura de una red LoRa}
+\label{fig:redLoRa}
+\end{figure}
+
+El control del riego se realizará por medio de sensores y actuadores que permitirán un funcionamiento autónomo del sistema. Los actuadores consistirán en siete electroválvulas y una bomba de riego trifásica que serán accionados de manera indirecta por sus correspondientes relés. El sensado se realizará con hasta 8 sensores de presión o caudal, los cuales permitirán conocer el estado del circuito hidráulico.
+
+Una pantalla táctil permitirá el accionamiento manual del sistema y su configuración de forma local, habilitando la gestión de las reglas de control de riego y el despliegue de la información del sistema. Esto permitirá al operario utilizar el sistema de un modo intuitivo y con un rápido acceso a la información importante.
+
+Por último, un subsistema dedicado al diagnóstico y gestión de fallas, alertará de manera local y remota en caso de errores en el funcionamiento.
+
+Se espera con este proyecto brindar un prototipo de un producto confiable, intuitivo y que mejore la gestión del agua por parte de los productores agropecuarios. En la figura \ref{fig:diagBloques} se presenta un diagrama del sistema completo.
+
 
 \vspace{25px}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.7\textwidth]{./Figuras/diagBloques.png}
+\includegraphics[width=0.9\textwidth]{./Figuras/DiagramaBloques.png}
 \caption{Diagrama en bloques del sistema}
+
 \label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
 
-El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
+%El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
 \end{consigna}
 
 
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} 
-Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
+\begin{consigna}{black} 
+%Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
  
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
+%Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
  
-Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
+%Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
 
-\begin{itemize}
-\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
-\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
-\end{itemize}
+%\begin{itemize}
+%\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
+%\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
+%\end{itemize}
 
-Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
+%Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -163,32 +186,31 @@ Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por e
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
+Auspiciante   & \clientename      &\empclientename	& Director de Ingeniería\\ \hline
+Cliente       & \clientename      &\empclientename	& Director de Ingeniería\\ \hline
+Impulsor      & \clientename      &\empclientename 	& Director de Ingeniería\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
+Colaboradores & -                 & -             	& -       	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Equipo        & -   		      & -             	& -       	\\ \hline
+Opositores    & -                 & -             	& -       	\\ \hline
+Usuario final & -                 & -             	& -       	\\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los Orientadores.
+%El Director suele ser uno de los Orientadores.
 
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
+%No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
 
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
+%No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
 
-Sería deseable listar a continuación de la tabla las principales características de cada interesado.
- 
-Por ejemplo:
+%Sería deseable listar a continuación de la tabla las principales características de cada interesado.
+ deben desplegar los datos de los sensores de presión y caudal, el estado de las electroválvulas y el estado de la bomba de riego.
+%Por ejemplo:
 \begin{itemize}
-\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
+\item Cliente: El cliente dispone de poco tiempo. 
+%\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
+%\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
 \end{itemize}
 
 \end{consigna}
@@ -197,136 +219,244 @@ Por ejemplo:
 
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
+El propósito de este proyecto es el prototipado de un sistema de control y monitoreo de riego. El objetivo del prototipo es la creación de un producto que permita extender las prestaciones  del servicio de monitoreo que brinda la empresa \empclientename.
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
+%\begin{consigna}{black}
+%¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
 
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
-\end{consigna}
+%Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
+%\end{consigna}
+
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
+%\begin{consigna}{red}
+%¿Qué se incluye y que no se incluye en este proyecto?
+%Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+%Explicitar todo lo quede comprendido dentro del alcance del proyecto.
+%Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+%\end{consigna}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+Tareas comprendidas en la realización del proyecto:
+\begin{itemize}
+ \item[$-$] Implementación de algoritmos para control automático de riego.
+\item[$-$] Diseño e implementación de sistema de detección de fallas.
+\item[$-$] Implementación de comunicación con servidor desde red LoRa.
+\item[$-$] Diseño e implementación de sistema de alimentación secundario.
+\item[$-$] Diseño e implementación de interfaz gráfica.
+\item[$-$] Implementación local de algoritmos para control y configuración remotos del sistema.
+\item[$-$] Diseño de página web en el servidor con funcionalidad mínima para control y visualización de datos importantes.
+\end{itemize}
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
 
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
-
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
-
-\end{consigna}
-
+El presente proyecto no incluye:
+\begin{itemize}
+\item[$-$] Incorporación de sensores remotos.
+\item[$-$] Diseño de pagina web completa con capacidad para gestionar todas las configuraciones disponibles.
+\end{itemize}
 
 \section{3. Supuestos del proyecto}
 \label{sec:supuestos}
+%\begin{consigna}{red}
+%``Para el desarrollo del presente proyecto se supone que: ...''
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+%\begin{itemize}
+%\item Supuesto 1
+%\item Supuesto 2...
+%\end{itemize}
 
+%Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
+%\end{consigna}
+
+Para el desarrollo del presente proyecto se supone que:
 \begin{itemize}
-\item Supuesto 1
-\item Supuesto 2...
+\item[$-$] El proyecto puede ser desarrollado en tiempo y forma en base a un análisis previo.
+\item[$-$] El cliente proveerá el hardware necesario para realizar el desarrollo.
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
+\clearpage
 
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
+%\begin{consigna}{red}
+%Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
+%\begin{enumerate}
+%\item Grupo de requerimientos asociados con...
+%	\begin{enumerate}
+%	\item Requerimiento 1
+%	\item Requerimiento 2
+%	\item Requerimiento 3 (prioridad menor)
+%	\end{enumerate}
+%\item Grupo de requerimientos asociados con...
+%	\begin{enumerate}
+%	\item Requerimiento 1
+%	\item Requerimiento 2 (prioridad menor)
+%	\end{enumerate}
+%\end{enumerate}
+
+%Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
+
+%De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
+
+%Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
+
+%No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
+
+%Y al escribirlos seguir las siguientes reglas:
+%\begin{itemize}
+%\item Ser breve y conciso (nadie lee cosas largas). 
+%\item Ser específico: no dejar lugar a confusiones.
+%\item Expresar los requerimientos en términos que sean cuantificables y medibles.
+%\end{itemize}
+%\end{consigna}
 
 \begin{enumerate}
-\item Grupo de requerimientos asociados con...
+	\item \textbf{\textit{Hardware:}}
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2
-	\item Requerimiento 3 (prioridad menor)
-	\end{enumerate}
-\item Grupo de requerimientos asociados con...
+		\item El sistema debe poder accionar desde 1 (una) hasta 8 (ocho) 			  	electroválvulas.
+		\item El sistema debe ser capaz de activar y desactivar el contactor de una bomba de riego trifásica.
+		\item Se deben poder manejar entre 1 (uno) y 7 (siete) sensores de presión o caudal.
+		\item El sistema debe tener conexión con una red LoRaWan.
+		\item En caso de interrupción del suministro eléctrico, el sistema deberá funcionar por hasta 2 semanas solo con alertas sonoras y envío de notificaciones al servidor.
+	\end{enumerate}		
+	
+	%\vspace{25px}
+	\item \textbf{\textit{Firmware:}}
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2 (prioridad menor)
+		\item Debe poder recibir y transmitir datos desde y hacia una base de datos.
+		\item Debe poder configurar rutinas de riego. Una rutina de riego tendrá una fecha de inicio y una fecha de finalización.
+		\item Debe detectar la falta de conectividad con la red LoraWan.
+		\item Debe poder ser controlado remotamente. 
 	\end{enumerate}
+	
+	\item \textbf{\textit{Interfaz gráfica:}}
+	\begin{enumerate}
+		\item Debe respetar la convención elegida por el cliente.
+		\item Debe ser intuitiva y fácil de entender.		
+		\item Debe mostrar los datos de los sensores de presión y caudal.
+		\item Debe mostrar el estado de las electroválvulas. 
+		\item Debe mostrar el estado de la bomba de riego.
+	\end{enumerate}
+
+	%\item \textbf{\textit{No funcionales:}}
+	
 \end{enumerate}
 
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
+%\section{Historias de usuarios (\textit{Product backlog})}
+%\label{sec:backlog}
 
-De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-\item Ser breve y conciso (nadie lee cosas largas). 
-\item Ser específico: no dejar lugar a confusiones.
-\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
-
-\section{Historias de usuarios (\textit{Product backlog})}
-\label{sec:backlog}
-
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
-\end{consigna}
+%\begin{consigna}{red}
+%Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+%\end{consigna}
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Cosas como: 
+%\begin{consigna}{red}
+%Cosas como: 
 \begin{itemize}
-\item Manual de uso
-\item Diagrama esquemático
-\item Código fuente
-\item Diagrama de instalación
-\item Informe final
+%\item Manual de uso
+\item[$-$] Diagrama esquemático.
+\item[$-$] Código fuente.
+\item[$-$] Video demostrativo.
+%\item Diagrama de instalación
+\item[$-$] Informe final.
 
 \end{itemize}
 
-\end{consigna}
+%\end{consigna}
+
+\clearpage
 
 \section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-Se recomienda mostrar el WBS mediante una lista indexada:
+%\begin{consigna}{red}
+%Se recomienda mostrar el WBS mediante una lista indexada:
+
+%\begin{enumerate}
+%\item Grupo de tareas 1
+%	\begin{enumerate}
+%	\item Tarea 1 (tantas hs)
+%	\item Tarea 2 (tantas hs)
+%	\item Tarea 3 (tantas hs)
+%	\end{enumerate}
+%\item Grupo de tareas 2
+%	\begin{enumerate}
+%	\item Tarea 1 (tantas hs)
+%	\item Tarea 2 (tantas hs)
+%	\item Tarea 3 (tantas hs)
+%	\end{enumerate}
+%	\item Grupo de tareas 3
+%	\begin{enumerate}
+%	\item Tarea 1 (tantas hs)
+%	\item Tarea 2 (tantas hs)
+%	\item Tarea 3 (tantas hs)
+%	\item Tarea 4 (tantas hs)
+%	\item Tarea 5 (tantas hs)
+%	\end{enumerate}
+%\end{enumerate}
+
+%Cantidad total de horas: (tantas hs)
+
+%Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
+%\end{consigna}
 
 \begin{enumerate}
-\item Grupo de tareas 1
+	\item \textbf{ \textit{Planificación:}} 50hs
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+		\item Redacción de planificación: 30hs 
+		\item Análisis y validación con cliente : 5hs
+		\item Diseño de arquitectura y validación: 15hs
 	\end{enumerate}
-\item Grupo de tareas 2
-	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
-	\end{enumerate}
-	\item Grupo de tareas 3
-	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
-	\item Tarea 4 (tantas hs)
-	\item Tarea 5 (tantas hs)
-	\end{enumerate}
+	
+	 \item \textbf{\textit{Firmware:}} 322hs
+	 \begin{enumerate}
+	 	\item Asimilación de herramientas a utilizar: 30hs
+	 	\item Estructura base: 60hs
+	 	\begin{enumerate}
+	 		\item Driver de sensores de presión: 15hs
+	 		\item Driver de caudalímetros: 15hs
+	 		\item Tareas base: 30hs
+	 	\end{enumerate}
+	 	\item Gestor de rutinas de riego: 30hs
+	 	\item Integración a Firmware 0.1v: 2hs
+	 	\item Interfaz Gráfica: 40hs
+	 	\item Integración a Firmware 0.2v: 2hs
+	 	\item Decodificador de mensajes externos[básico]: 30hs
+	 	\item Integración a Firmware 0.3v: 2hs
+	 	\item Monitor de fallas y driver LoRaWAN: 30hs
+	 	\item Integración a Firmware 0.4v: 2hs
+	 	\item Gestor de reglas de control: 40hs
+	 	\item Integración a Firmware 1.0v: 4hs
+	 	\item Decodificador de mensajes externo[Completo]: 50hs
+	 \end{enumerate}
+	 
+	 \item \textbf{\textit{Hardware:}} 140hs
+	 \begin{enumerate}
+	 	\item Diseño de sistema de alimentación primaria: 10hs
+	 	\item Diseño de sistema de alimentación secundaria: 30hs
+	 	\item Análisis de proveedores: 20hs
+	 	\item Desarrollo de placa completa: 80hs
+	 	\begin{enumerate}
+	 		\item Diseño de Esquematico: 40hs
+	 		\item Diseño de PCB: 40hs
+	 	\end{enumerate}
+	 \end{enumerate}
+	 	
+	 \item \textbf{\textit{Web:}} 60hs
+	 \begin{enumerate}
+	 	\item Investigación y asimilación de herramientas: 30hs
+	 	\item Diseño de interfaz web: 30hs
+	 \end{enumerate}
+	 
+	 \item \textbf{\textit{Redacción de informe final:}} 60hs
 \end{enumerate}
 
-Cantidad total de horas: (tantas hs)
+Cantidad total de horas: 632hs
 
-Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
-
-\end{consigna}
+\clearpage
 
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
