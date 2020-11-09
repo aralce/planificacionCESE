@@ -14,8 +14,8 @@
 \autor{Ariel Alejandro Cerfoglia} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Esp.Ing.Nelson Ariel Fortunatti}
-\pertenenciaDirector{ITBA, UBA, UNLP} 
+\director{Esp. Ing. Nelson Ariel Fortunatti}
+\pertenenciaDirector{ITBA} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 %\codirector{} % si queda vacio no se deberíá incluir 
 %\pertenenciaCoDirector{}
@@ -84,7 +84,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo de un sistema de control y monitoreo de riego, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo de un sistema para el control y monitoreo de riego en campos de producción agropecuaria, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y 400.000 pesos, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -124,11 +124,11 @@ Se adjunta a esta acta la planificación inicial.
 
 %La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
 
-La revolución 4.0 es una realidad cada vez más cercana. El mercado del internet de las cosas crece a ritmos acelerados, permitiendo la conectividad de cada vez más dispositivos. El sector agropecuario no ha sido ajeno a estos cambios, y en los recientes años, hemos sido testigos del surgimiento de un creciente número de empresas agtech, empresas vinculadas a la tecnología para la agricultura.
+La revolución 4.0 es una realidad cada vez más cercana. El mercado del internet de las cosas crece a ritmos acelerados, permitiendo la conectividad de cada vez más dispositivos. El sector agropecuario no ha sido ajeno a estos cambios, y en los recientes años han surgido un creciente número de empresas agtech, vinculadas a la tecnología para la agricultura.
 
-Este proyecto pretende realizar un sistema de control y monitoreo de riego que sea incorporado a un sistema de monitoreo preexistente de una empresa agtech; ampliando así su funcionalidad y brindando al productor agropecuario un mejor manejo del agua en sus cultivos. 
+Este proyecto pretende realizar un sistema de control y monitoreo de riego que sea incorporado a un sistema de monitoreo preexistente de una empresa agtech. Se ampliará su funcionalidad y brindará al productor agropecuario un mejor manejo del agua en sus cultivos. 
 
-El sistema se comunicará de forma inalámbrica con un servidor en la empresa, pudiendo recibir  y transmitir datos desde y hacia el mismo, respectivamente. El protocolo utilizado en dicha comunicación será el protocolo LoRa, caracterizado por su eficiencia para transmitir información a largas distancias y con baja potencia; resultando especialmente útil en zonas sin cobertura celular.
+El sistema se comunicará de forma inalámbrica con un servidor en la empresa \empclientename . Podrá recibir  y transmitir datos desde y hacia el mismo, respectivamente. El protocolo utilizado en dicha comunicación será el protocolo LoRa, caracterizado por su eficiencia para transmitir información a largas distancias y con baja potencia; resulta especialmente útil en zonas sin cobertura celular. En la figura \ref{fig:redLoRa} se muestra la estructura básica de la red LoRa.
 
 \begin{figure}[htpb]
 \centering 
@@ -139,7 +139,7 @@ El sistema se comunicará de forma inalámbrica con un servidor en la empresa, p
 
 El control del riego se realizará por medio de sensores y actuadores que permitirán un funcionamiento autónomo del sistema. Los actuadores consistirán en siete electroválvulas y una bomba de riego trifásica que serán accionados de manera indirecta por sus correspondientes relés. El sensado se realizará con hasta 8 sensores de presión o caudal, los cuales permitirán conocer el estado del circuito hidráulico.
 
-Una pantalla táctil permitirá el accionamiento manual del sistema y su configuración de forma local, habilitando la gestión de las reglas de control de riego y el despliegue de la información del sistema. Esto permitirá al operario utilizar el sistema de un modo intuitivo y con un rápido acceso a la información importante.
+Una pantalla táctil permitirá el accionamiento manual del sistema y su configuración de forma local. Habilitará la gestión de las reglas de control de riego y el despliegue de la información del sistema. Esto permitirá al operario utilizar el sistema de un modo intuitivo y con un rápido acceso a la información importante.
 
 Por último, un subsistema dedicado al diagnóstico y gestión de fallas, alertará de manera local y remota en caso de errores en el funcionamiento.
 
@@ -182,19 +182,17 @@ Se espera con este proyecto brindar un prototipo de un producto confiable, intui
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
 %\label{tab:interesados}
-\begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
+\begin{tabularx}{\linewidth}{|p{3cm}|p{5.5cm}|X|l|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   & \clientename      &\empclientename	& Director de Ingeniería\\ \hline
-Cliente       & \clientename      &\empclientename	& Director de Ingeniería\\ \hline
-Impulsor      & \clientename      &\empclientename 	& Director de Ingeniería\\ \hline
+Auspiciante, cliente e impulsor.   & \clientename      &\empclientename	& Director de Ingeniería\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Colaboradores & -                 & -             	& -       	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
 Equipo        & -   		      & -             	& -       	\\ \hline
 Opositores    & -                 & -             	& -       	\\ \hline
-Usuario final & -                 & -             	& -       	\\ \hline
+Usuario final & Productores agropecuarios & -       & -       	\\ \hline
 \end{tabularx}
 \end{table}
 
@@ -205,7 +203,7 @@ Usuario final & -                 & -             	& -       	\\ \hline
 %No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
 
 %Sería deseable listar a continuación de la tabla las principales características de cada interesado.
- deben desplegar los datos de los sensores de presión y caudal, el estado de las electroválvulas y el estado de la bomba de riego.
+ 
 %Por ejemplo:
 \begin{itemize}
 \item Cliente: El cliente dispone de poco tiempo. 
@@ -215,7 +213,7 @@ Usuario final & -                 & -             	& -       	\\ \hline
 
 \end{consigna}
 
-
+\clearpage
 
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
@@ -237,22 +235,22 @@ El propósito de este proyecto es el prototipado de un sistema de control y moni
 %Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
 %\end{consigna}
 
-Tareas comprendidas en la realización del proyecto:
+El proyecto incluirá:
 \begin{itemize}
- \item[$-$] Implementación de algoritmos para control automático de riego.
-\item[$-$] Diseño e implementación de sistema de detección de fallas.
-\item[$-$] Implementación de comunicación con servidor desde red LoRa.
-\item[$-$] Diseño e implementación de sistema de alimentación secundario.
-\item[$-$] Diseño e implementación de interfaz gráfica.
-\item[$-$] Implementación local de algoritmos para control y configuración remotos del sistema.
-\item[$-$] Diseño de página web en el servidor con funcionalidad mínima para control y visualización de datos importantes.
+ \item[$-$] Control automático de riego.
+\item[$-$] Sistema de detección de fallas.
+\item[$-$] Comunicación con servidor desde red LoRa.
+\item[$-$] Sistema de alimentación secundario.
+\item[$-$] Interfaz gráfica.
+\item[$-$] Soporte para control y configuración desde un servidor remoto.
+\item[$-$] Página web en servidor con funcionalidad mínima para control y visualización de datos importantes.
 \end{itemize}
 
 
 El presente proyecto no incluye:
 \begin{itemize}
-\item[$-$] Incorporación de sensores remotos.
-\item[$-$] Diseño de pagina web completa con capacidad para gestionar todas las configuraciones disponibles.
+\item[$-$] Sensores remotos.
+\item[$-$] Pagina web completa con capacidad para gestionar todas las configuraciones disponibles.
 \end{itemize}
 
 \section{3. Supuestos del proyecto}
@@ -317,7 +315,7 @@ Para el desarrollo del presente proyecto se supone que:
 		\item El sistema debe poder accionar desde 1 (una) hasta 8 (ocho) 			  	electroválvulas.
 		\item El sistema debe ser capaz de activar y desactivar el contactor de una bomba de riego trifásica.
 		\item Se deben poder manejar entre 1 (uno) y 7 (siete) sensores de presión o caudal.
-		\item El sistema debe tener conexión con una red LoRaWan.
+		\item El sistema debe tener conexión con una red LoRaWAN.
 		\item En caso de interrupción del suministro eléctrico, el sistema deberá funcionar por hasta 2 semanas solo con alertas sonoras y envío de notificaciones al servidor.
 	\end{enumerate}		
 	
@@ -325,14 +323,14 @@ Para el desarrollo del presente proyecto se supone que:
 	\item \textbf{\textit{Firmware:}}
 	\begin{enumerate}
 		\item Debe poder recibir y transmitir datos desde y hacia una base de datos.
-		\item Debe poder configurar rutinas de riego. Una rutina de riego tendrá una fecha de inicio y una fecha de finalización.
-		\item Debe detectar la falta de conectividad con la red LoraWan.
-		\item Debe poder ser controlado remotamente. 
+		\item Debe poder configurar rutinas de riego. Cada rutina de riego tendrá una fecha de inicio y una fecha de finalización.
+		\item Debe detectar la falta de conectividad con la red LoRaWAN.
+		\item Debe ejecutar acciones solicitadas desde un servidor. 
 	\end{enumerate}
 	
 	\item \textbf{\textit{Interfaz gráfica:}}
 	\begin{enumerate}
-		\item Debe respetar la convención elegida por el cliente.
+		\item Debe ser aprobada por el cliente.
 		\item Debe ser intuitiva y fácil de entender.		
 		\item Debe mostrar los datos de los sensores de presión y caudal.
 		\item Debe mostrar el estado de las electroválvulas. 
