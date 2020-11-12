@@ -63,11 +63,10 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento                                          & 23/10/2020 \\ \hline
-%1.1      & Avances en alguna cosa                                          & dd/mm/aaaa \\ \hline
-%1.2      & Otro ejemplo \newline
-%		   Con texto partido \newline
-%		   En varias líneas \newline
-%		   A propósito                                                     & dd/mm/aaaa \\ \hline
+1.1      & Incorporación de incisos 1 a 6                                  & 03/11/2020 \\ \hline
+1.2      & Incorporación de historias de usuario \newline
+		   Incorporación de activity on node \newline 									   
+		   Corrección de incisos 1 a 6                           & 11/11/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -139,7 +138,7 @@ El sistema se comunicará de forma inalámbrica con un servidor en la empresa \e
 
 El control del riego se realizará por medio de sensores y actuadores que permitirán un funcionamiento autónomo del sistema. Los actuadores consistirán en siete electroválvulas y una bomba de riego trifásica que serán accionados de manera indirecta por sus correspondientes relés. El sensado se realizará con hasta 8 sensores de presión o caudal, los cuales permitirán conocer el estado del circuito hidráulico.
 
-Una pantalla táctil permitirá el accionamiento manual del sistema y su configuración de forma local. Habilitará la gestión de las reglas de control de riego y el despliegue de la información del sistema. Esto permitirá al operario utilizar el sistema de un modo intuitivo y con un rápido acceso a la información importante.
+Una pantalla táctil desplegará la información importante del sistema y su configuración de forma local. La gestión de las reglas de control de riego se realizará desde un servidor por un técnico o personal especializado. Esto permitirá al operario utilizar el sistema de un modo intuitivo y con un rápido acceso a la información importante.
 
 Por último, un subsistema dedicado al diagnóstico y gestión de fallas, alertará de manera local y remota en caso de errores en el funcionamiento.
 
@@ -341,12 +340,102 @@ Para el desarrollo del presente proyecto se supone que:
 	
 \end{enumerate}
 
-%\section{Historias de usuarios (\textit{Product backlog})}
-%\label{sec:backlog}
+\section{Historias de usuarios (\textit{Product backlog})}
+\label{sec:backlog}
 
 %\begin{consigna}{red}
 %Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
 %\end{consigna}
+\begin{enumerate}
+
+	\item Como ingeniero agrónomo, quiero controlar remotamente el riego para aumentar la calidad en los cultivos.
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|} \hline
+				\multicolumn{4}{|c|}{\textbf{\textit{History points}}} \\\hline
+  			Conocimiento & Complejidad & Volumen & Incertidumbre \\\hline
+    			  1 	   &     13       &   13     &      8        \\\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+
+	 \item Como ingeniero agrónomo, quiero gestionar rutinas de riego para organizar las plantaciones.
+	 \begin{table}[h]
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|} \hline
+				\multicolumn{4}{|c|}{\textbf{\textit{History points}}} \\\hline
+  			Conocimiento & Complejidad & Volumen & Incertidumbre \\\hline
+    			  3 	   &     8       &   8     &      3        \\\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+\clearpage
+
+	\item Como ingeniero agrónomo. quiero estar al tanto de los problemas para reducir riesgos.
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|} \hline
+				\multicolumn{4}{|c|}{\textbf{\textit{History points}}} \\\hline
+  			Conocimiento & Complejidad & Volumen & Incertidumbre \\\hline
+    			  5 	   &     21       &   21     &      21        \\\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+
+	\item Como operario, quiero conocer la información importante de un modo sencillo para dar una rápida respuesta al supervisor.
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|} \hline
+				\multicolumn{4}{|c|}{\textbf{\textit{History points}}} \\\hline
+  			Conocimiento & Complejidad & Volumen & Incertidumbre \\\hline
+    			  13	   &     3       &   3     &      13        \\\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	
+	\item Como dueño del campo, quiero consultar de un modo simple el estado del riego para tomar decisiones estratégicas.
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|} \hline
+				\multicolumn{4}{|c|}{\textbf{\textit{History points}}} \\\hline
+  			Conocimiento & Complejidad & Volumen & Incertidumbre \\\hline
+    			  2 	   &     2       &   5     &      5        \\\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	
+	\item Como ingeniero agrónomo, quiero que el sistema me informe de fallas en el suministro eléctrico para replanificar el riego.
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|} \hline
+				\multicolumn{4}{|c|}{\textbf{\textit{History points}}} \\\hline
+  			Conocimiento & Complejidad & Volumen & Incertidumbre \\\hline
+    			  21 	   &     1       &   1     &      1        \\\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	
+
+	\item Como operario, quiero poder regar en caso de perdida de conexión con el servidor para terminar con las tareas del día.
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|} \hline
+				\multicolumn{4}{|c|}{\textbf{\textit{History points}}} \\\hline
+  			Conocimiento & Complejidad & Volumen & Incertidumbre \\\hline
+    			  8 	   &     5       &   2     &      2        \\\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+
+\end{enumerate}
+
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
@@ -365,7 +454,6 @@ Para el desarrollo del presente proyecto se supone que:
 
 %\end{consigna}
 
-\clearpage
 
 \section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
@@ -459,25 +547,24 @@ Cantidad total de horas: 632hs
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
-
+%\begin{consigna}{red}
+%Armar el AoN a partir del WBS definido en la etapa anterior. 
 %La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
-
 %\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
+%\end{consigna}
 
-\end{consigna}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=\textwidth]{./Figuras/activityOnNode.png}
 \caption{Diagrama en \textit{Activity on Node}}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
+
+%Indicar claramente en qué unidades están expresados los tiempos.
+%De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
+%Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
 
 
 
