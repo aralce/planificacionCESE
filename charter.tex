@@ -1,4 +1,6 @@
+
 \documentclass[11pt]{charter}
+\usepackage{adjustbox}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
 \titulo{Sistema de control y monitoreo de riego } 
@@ -67,6 +69,8 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.2      & Incorporación de historias de usuario \newline
 		   Incorporación de activity on node \newline 									   
 		   Corrección de incisos 1 a 6                           & 11/11/2020 \\ \hline
+1.3		 & Modificación de diagrama de activity on node\newline
+		   Incorporación de incisos 8 a 13						 & 23/11/2020  \\ \hline  
 \end{tabularx}
 \end{table}
 
@@ -556,7 +560,7 @@ Cantidad total de horas: 632hs
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=\textwidth]{./Figuras/activityOnNode.png}
+\includegraphics[width=1.1\textwidth]{./Figuras/activityOnNode2.png}
 \caption{Diagrama en \textit{Activity on Node}}
 \label{fig:AoN}
 \end{figure}
@@ -566,92 +570,89 @@ Cantidad total de horas: 632hs
 %De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
 %Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
 
+\clearpage
 
 
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.
+%\begin{consigna}{red}
+%Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.
 
-Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre las cuales destacamos:
+%Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre las cuales destacamos:
 
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
+%\begin{itemize}
+%\item Planner
+%\item GanttProject
+%\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ %\url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
+%\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
+%\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
+%\end{itemize}
 
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
+%Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
+%Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
 
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
+%Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
+%Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
+%Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
 
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
+%En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
 
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de gantt de ejemplo}
-\label{fig:gantt}
+%\begin{figure}[htbp]
+%\begin{center}
+%\begin{ganttchart}{1}{12}
+%  \gantttitle{2020}{12} \\
+%  \gantttitlelist{1,...,12}{1} \\
+%  \ganttgroup{Group 1}{1}{7} \\
+%  \ganttbar{Task 1}{1}{2} \\
+%  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
+%  \ganttmilestone{Milestone o hito}{7} \ganttnewline
+%  \ganttbar{Final Task}{8}{12}
+%  \ganttlink{elem2}{elem3}
+%  \ganttlink{elem3}{elem4}
+%\end{ganttchart}
+%\end{center}
+%\caption{Diagrama de gantt de ejemplo}
+%\label{fig:gantt}
+%\end{figure}
+
+%\end{consigna}
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=\textwidth]{./Figuras/gantT.png}
+\caption{Tabla de tareas en Diagrama de Gant}
+\label{fig:redLoRa}
 \end{figure}
 
-\end{consigna}
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=0.85\textwidth]{./Figuras/gantG.png}
+\caption{Diagrama de Gant}
+\label{fig:redLoRa}
+\end{figure}
 
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
 
 
-\begin{table}
+\begin{table}[H]
 \label{tab:recursos}
 \centering
-\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|c|@{}}
-\hline
+\begin{tabularx}{\linewidth}{@{}|c|X|p{0.6cm}|p{3.2cm}|X|X|@{}} \hline
 \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & Material 1 & Material 2 & Material 3 & Material 4 \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC & Placa de desarrollo & Módulo LoRaWAN & Plataforma Smartium \\ \hline
+1 & Planificación  & 50 &  &  &  \\ \hline
+2.1 & Asimilar\newline herramientas & 30 &  &  &  \\ \hline
+2.2 & Estructura\newline base  & 60 & 20 &  &  \\ \hline
+2.3 & Gestor de\newline rutinas & 30 & 5 &  &  \\ \hline
+2.5 & Interfaz\newline gráfica & 40 & 40 &  &  \\ \hline
+2.7 & Decodificador\newline básico & 30 & 30 &  & 10 \\ \hline
+2.9 & Monitor y\newline driver\newline LoRaWAN & 30 & 30 & 20 & 10 \\ \hline
+2.11 & Gestor de\newline reglas & 40 & 40 & 20 & 10 \\ \hline 
+2.13 & Decodificador\newline completo & 50 & 50 & 40 & 40 \\ \hline
+3 & Hardware & 140 &  &  &  \\ \hline
+4 & Web & 60 & 30 & 30 & 60 \\ \hline
 
 \end{tabularx}%
 \end{table}
@@ -660,16 +661,16 @@ En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realiza
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
+%\begin{consigna}{red}
+%Si el proyecto es complejo entonces separarlo en partes:
+%\begin{itemize}
+%\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
+%%\item El desglose detallado del subtotal de cada una de las áreas.
+%\end{itemize}
 
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
+%IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
 
-\end{consigna}
+%\end{consigna}
 
 \begin{table}[htpb]
 \centering
@@ -682,24 +683,20 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+ Hora de Ingeniero Jr. & 
+  \multicolumn{1}{c|}{632} &
+  \multicolumn{1}{c|}{354,44} &
+  \multicolumn{1}{r|}{224006} \\ \hline
+ Kit de desarrollo &  
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{20000} &
+  \multicolumn{1}{r|}{20000} \\ \hline
+\multicolumn{1}{|l|}{Módulo LoRaWAN} &
+   1 &
+\multicolumn{1}{c|}{6000}  & 
+\multicolumn{1}{r|}{6000}  \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{r|}{\textbf{\textit{250006}}} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -707,60 +704,73 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+\multicolumn{1}{|l|}{Costos indirectos (\% 60 de los costos directos)} &
+\multicolumn{1}{c|}{1}   &
+\multicolumn{1}{c|}{150000} &
+\multicolumn{1}{r|}{150000} \\ \hline
+
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{r|}{\textbf{\textit{150000}}} \\ \hline
 \rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} &
+\multicolumn{3}{|c|}{TOTAL} & \multicolumn{1}{r|}{\textit{\textbf{400006}}}
    \\ \hline
 \end{tabularx}%
 \end{table}
 
+\clearpage
 
 \section{11. Matriz de asignación de responsabilidades}
 \label{sec:responsabilidades}
-\begin{consigna}{red}
-Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
+%\begin{consigna}{red}
+%Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
 
 \begin{table}[htpb]
-\centering
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|c|c|c|c|c|}
+\raggedleft
+\begin{adjustbox}{max width=15cm}
+\begin{tabular}{|p{1cm}|p{3.2cm}|c|c|c|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 \cellcolor[HTML]{C0C0C0} &
   \cellcolor[HTML]{C0C0C0} &
-  \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-6} 
+  \multicolumn{3}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-5} 
 \rowcolor[HTML]{C0C0C0} 
 \cellcolor[HTML]{C0C0C0} &
   \cellcolor[HTML]{C0C0C0} &
   Responsable &
   Orientador &
-  Equipo &
-  Cliente \\ \cline{3-6} 
+  Cliente \\ \cline{3-5} 
 \rowcolor[HTML]{C0C0C0} 
 \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
   \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
   \authorname &
   \supname &
-  Nombre de alguien &
   \clientename \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+1.1 & Redacción de\newline planificación  & P  & C & I \\ \hline
+1.2 & Análisis y\newline validación\newline con cliente & P & I & A \\ \hline
+1.3 & Diseño de\newline arquitectura y\newline validación & P & I & A \\ \hline
+2.1 & Asimilación de\newline herramientas\newline a utilizar &  P  & I & I \\ \hline
+2.2 & Estructura base & P & I & A \\ \hline
+2.3 & Gestor de rutinas de riego & P & I & I \\ \hline
+2.4 & Integración\newline a Firmware 0.1v & P & I & A \\ \hline
+2.5 & Interfaz Gráfica & P &  I & I \\ \hline
+2.6 & Integración\newline a Firmware 0.2v & P & I  & A \\ \hline
+2.7 & Decodificador\newline de mensajes\newline externos [básico] & P & I & I \\ \hline
+2.8 & Integración\newline a Firmware 0.3v & P & I  & A \\ \hline
+2.9 & Monitor de fallas y driver LoRaWAN & P  & I & I \\ \hline
+2.10 & Integración\newline a Firmware 0.4v  & P & I  & A \\ \hline
+2.11 & Gestor de reglas de control & P & I  & I \\ \hline
+2.12 & Integración\newline a Firmware 1.0v & P & I & A \\ \hline
+2.13 & Decodificador\newline de mensajes\newline externos[completo] & P & I  & A \\ \hline
+3.1 & Diseño de\newline sistema de \newline alimentación\newline primaria & P & I  & I \\ \hline
+3.2 & Diseño de \newline sistema de\newline alimentación\newline secundaria & P & I  & I  \\ \hline
+3.3 & Análisis de\newline proveedores & P & I & C \\ \hline
+3.4 & Desarrollo de\newline placa completa & P & I & A \\ \hline
+4.1 & Investigación\newline y asimilación de\newline herramientas & P & I  & I \\ \hline
+4.2 & Diseño de\newline interfaz web & P  & I  & A \\ \hline
+5 & Redacción de\newline informe final & P  & C  & I \\ \hline
 \end{tabular}%
-}
+\end{adjustbox}
+
 \end{table}
 
 {\footnotesize
@@ -774,41 +784,81 @@ Referencias:
 \end{itemize}
 } %footnotesize
 
-Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
-A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
+%Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
+%A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
 
-Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
+%Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
 
-\end{consigna}
+%\end{consigna}
 
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
+%\begin{consigna}{red}
+%a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
  
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
-\begin{itemize}
-\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de severidad (S).
-\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
+%Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
+%\begin{itemize}
+%\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
+%Justificar el motivo por el cual se asigna determinado número de severidad (S).
+%\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
+%Justificar el motivo por el cual se asigna determinado número de (O). 
+%\end{itemize}   
 
-Riesgo 2:
+%Riesgo 2:
+%\begin{itemize}
+%\item Severidad (S): 
+%\item Ocurrencia (O):
+%\end{itemize}
+
+%Riesgo 3:
+%\begin{itemize}
+%\item Severidad (S): 
+%\item Ocurrencia (O):
+%\end{itemize}
+
 \begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
+ \item[•] \textbf{Riesgo 1: Retraso en el proyecto}
+  \begin{itemize}
+  	\item[$-$] \textit{\textbf{Severidad (S): 6}} - El retraso en el proyecto implica la no finalización de la especialización. El retraso en el proyecto no tiene un gran impacto sobre el cliente por ser este un prototipo sin fecha de venta establecida.
+  	\item[$-$] \textit{\textbf{Probabilidad de Ocurrencia (O): 8}} - El retraso en el proyecto final es algo muy común debido a la longitud del mismo.
+  \end{itemize}
 \end{itemize}
 
-Riesgo 3:
 \begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
+ \item[•] \textbf{Riesgo 2: El microcontolador no posee la potencia necesaria}
+  \begin{itemize}
+  	\item[$-$] \textit{\textbf{Severidad (S): 9}} - Frente a la imposibilidad de completar la implementación por falta de recursos, el proyecto en su totalidad se verá comprometido.
+  	\item[$-$] \textit{\textbf{Probabilidad de Ocurrencia (O): 5}} - La necesidad de incorporar una interfaz gráfica genera una carga sustancial sobre el sistema embebido y las consideraciones en tamaño de memoria y potencia de procesamiento pueden estar subdimensionadads. 
+  \end{itemize}
 \end{itemize}
 
+\begin{itemize}
+ \item[•] \textbf{Riesgo 3: Programa para desarrollo de interfaz gráfica presenta restricciones limitantes.}
+  \begin{itemize}
+  	\item[$-$] \textit{\textbf{Severidad (S): 4}} - La interfaz gráfica presenta varias implementaciones posibles, lo cual, minimiza el riesgo de encontrar limitaciones en el diseño.
+  	\item[$-$] \textit{\textbf{Probabilidad de Ocurrencia (O): 4}} - El desarrollo de interfaces gráficas en sistemas embebidos es un requerimiento muy común. Los programas para desarrollo de interfaces gráficas en sistemas embebidos son bastante completos. 
+  \end{itemize}
+\end{itemize}
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+\begin{itemize}
+ \item[•] \textbf{Riesgo 4: Daño en el kit de desarrollo}
+  \begin{itemize}
+  	\item[$-$] \textit{\textbf{Severidad (S): 10}} - El kit de desarrollo es un elemento de costo elevado. Todo el proyecto será construido con el kit, por lo cual, su destrucción comprometerá la consecución del proyecto.
+  	\item[$-$] \textit{\textbf{Probabilidad de Ocurrencia (O): 2}} - Quemar el kit de desarrollo es algo improbable si se es cuidadoso en su manipulación.
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+ \item[•] \textbf{Riesgo 5: Pérdida de los archivos fuente del firmware}
+  \begin{itemize}
+  	\item[$-$] \textit{\textbf{Severidad (S): 10}} - El firmware constituye la parte más importante del proyecto. Su pérdida puede reprensentar un retraso significativo.
+  	\item[$-$] \textit{\textbf{Probabilidad de Ocurrencia (O): 1}} - Se utilizará un control de versiones para la construcción del firmware. 
+  \end{itemize}
+\end{itemize}
+
+\clearpage
+%b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 
 \begin{table}[htpb]
 \centering
@@ -816,55 +866,249 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+1. Retraso en el proyecto & 6 & 8 & \textcolor{red}{48} &  6  & \textbf{\textcolor{green}{4}}  & \textbf{\textcolor{green}{24}}     \\ \hline
+2. El microcontolador no posee la potencia necesaria       & 9 & 5 & \textcolor{red}{45} & \textbf{\textcolor{green}{5}} & 5  & \textbf{\textcolor{green}{25}}  \\ \hline
+3. Programa para desarrollo de interfaz gráfica presenta restricciones limitantes      & 4 & 4 & \textbf{\textcolor{green}{16}}   &    &    &      \\ \hline
+4. Daño en el kit de desarrollo  & 10  & 2 &  \textbf{\textcolor{green}{20}}   &    &    &      \\ \hline
+5. Pérdida de los archivos fuente del firmware & 10  & 1 & \textbf{\textcolor{green}{10}} &    &    &      \\ \hline
 \end{tabularx}%
 \end{table}
 
-Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+%Criterio adoptado: 
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 30
 
-Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
+%Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
-c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
+%c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo %establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+\begin{itemize}
+ \item[•] \textbf{Riesgo 1: plan de mitigación}
+  \begin{itemize}
+  	\item[$-$] \textit{\textbf{Probabilidad de Ocurrencia (O*): 4}} - Se destinarán más horas de las planificadas para mitigar la probabilidad de haber subdimensionado el proyecto.
+  \end{itemize}
+\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+\begin{itemize}
+ \item[•] \textbf{Riesgo 2: plan de mitigación}
+  \begin{itemize}
+  	\item[$-$] \textit{\textbf{Severidad (S*): 5}} - Se diseñará el sistema con una HAL (hardware abstraction layer).
+  \end{itemize}
+\end{itemize}
+%  Nueva asignación de S y O, con su respectiva justificación:
+%  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al %10).
+%          Justificar el motivo por el cual se asigna determinado número de severidad %(S).
+%  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
+%          Justificar el motivo por el cual se asigna determinado número de (O).
+
+%Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
  
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+%Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
 
-\end{consigna}
+%\end{consigna}
 
 
 \section{13. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Para cada uno de los requerimientos del proyecto indique:
-\begin{itemize} 
-\item Req \#1: copiar acá el requerimiento.
+%\begin{consigna}{red}
+%Para cada uno de los requerimientos del proyecto indique:
+%\begin{itemize} 
+%\item Req \#1: copiar acá el requerimiento.
 
-Verificación y validación:
-
+\textit{\textbf{Verificación y validación de requerimientos:}}
 \begin{itemize}
-\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
-\end{itemize}
+	\item \textit{\textbf{1.1 Hardware:}} El sistema debe poder accionar de 1 (una) hasta 8 (ocho) electroválvulas.
+	\begin{itemize}
+		
+		\item \textit{ \textbf{Verificación}}
+		\begin{itemize}
+			\item El sistema cambia cada una de las 8 salidas al activarse la zona correspondiente.
+		\end{itemize}
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item El sistema acciona los relés necesarios para la activación de las correspondientes electroválvulas. 			
+		\end{itemize}
+	\end{itemize}
+	
+	\item \textit{\textbf{1.2 Hardware:}} El sistema debe ser capaz de activar y desactivar el contactor de una bomba de riego trifásica.
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación}}
+		\begin{itemize}
+			\item El sistema activa y desactiva la salida de la bomba cuando se decide activar y desactivar una zona, respectivamente.
+		\end{itemize}
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item El sistema activa y desactiva el relé que accionará el contactor de la bomba.
+		\end{itemize}
+	\end{itemize}
 
-\end{itemize}
+\clearpage
+	\item \textit{\textbf{1.3 Hardware:}} Se deben poder manejar entre 1 (uno) y 7(siete) sensores de presión o caudal.
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación}} 
+		\begin{itemize}
+			\item El sistema activa el modo falla en caso de detectar más de 2 atmósferas entre los sensores de presión.
+			\item El sistema activa el modo falla en caso de detectar más de 1 metro cúbico por segundo.
+		\end{itemize}
 
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item El sistema reconoce adecuadamente el protocolo de comunicación de los sensores.
+		\end{itemize}
+	\end{itemize}
+	
+	\item \textit{\textbf{1.4 Hardware:}} El sistema debe tener conexión con una red LoRaWAN
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación}}
+		\begin{itemize}
+			\item El módulo LoRaWAN recibe los mensajes correctos por parte del microcontrolador.
+		\end{itemize}
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item Se realiza una comunicación efectiva con la plataforma Smartium.
+		\end{itemize}
+	\end{itemize}
+	
+	\item \textit{\textbf{1.5 Hardware:}} En caso de interrupción del suministró eléctrico, el sistema deberá funcionar por hasta 2 semanas solo con alertas sonoras y envío de notificaciones al servidor.
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación}} 
+		\begin{itemize}
+			\item Se calcula que la energía de la batería permita 2 semanas de uso para transmisión de mensajes y alertas sonoras.
+		\end{itemize}
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item Se deja funcionando el sistema durante 2 semanas sin suministro eléctrico.
+		\end{itemize}
+	\end{itemize}
 
-\end{consigna}
+	\item \textit{\textbf{2.1 Firmware:}} Debe poder recibir y trasmitir datos desde y hacia una base de datos
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación}}
+		\begin{itemize}
+			\item El sistema envía mensajes al módulo LoRaWAN con las peticiónes necesarias para actuar sobre la base de datos.
+			\item El sistema puede procesar mensajes para recibir datos desde la base de datos.
+		\end{itemize}
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item El sistema logra colocar datos en la base de datos.
+			\item El sistema logra recibir datos de la base de datos.
+		\end{itemize}
+	\end{itemize}
+	
+	\item \textit{\textbf{2.2 Firmware:}} Debe poder configurar rutinas de riego. Cada rutina de riego tendrá una fecha de inicio y una fecha de finalización.
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación}}
+		\begin{itemize}
+			\item El sistema configura correctamente las variables internas para fijar una fecha de inicio y una fecha de finalización.
+		\end{itemize}
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item El sistema activa y desactiva las salidas en base a una rutina de riego fijada.
+		\end{itemize}
+	\end{itemize}
+
+\clearpage
+	
+	\item \textit{\textbf{2.3 Firmware:}} Debe detectar la falta de conectividad con la red LoRaWAN.
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación}}
+		\begin{itemize}
+			\item El sistema entra correctamente al estado "sin conectividad".
+		\end{itemize}
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item Al desconectar la antena del módulo LoRaWAN el sistema entra al estado de "sin conectividad". Desde la interfaz gráfica lo informa al usuario.
+		\end{itemize}					
+	\end{itemize}
+	
+	\item \textit{\textbf{2.4 Firmware:}} Debe ejecutar acciones solicitadas desde un servidor.
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación}}
+		\begin{itemize}
+			\item Se suministran al sistema los comandos que enviaría un servidor y este es capaz de reconocerlos.
+		\end{itemize}
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item Se solicita una acción desde el servidor y el sistema la realiza.
+		\end{itemize}
+	\end{itemize}
+	
+	\item \textit{\textbf{3.1 Interfaz gráfica:}} Debe ser aprobada por el cliente
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación:}} N/A
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item Es mostrada al cliente. Este la aprueba.	
+		\end{itemize}			
+	\end{itemize}
+	
+	\item \textit{\textbf{3.2 Interfaz gráfica:}} Debe ser intuitiva y facil de entender
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación:}} N/A
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item Es presentada al cliente. Este la testea y la aprueba.
+		\end{itemize}
+	\end{itemize}
+	
+	\item \textit{\textbf{3.3 Interfaz gráfica:}} Debe mostrar los datos de los sensores de presión y caudal.
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación:}} N/A
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item El cliente lo aprueba.
+		\end{itemize}
+	\end{itemize}
+	
+	\item \textit{\textbf{3.4 Interfaz gráfica:}} Debe mostrar el estado de las electroválvulas.
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación:}} N/A
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item El cliente lo aprueba.
+		\end{itemize}
+	\end{itemize}
+	
+	\item \textit{\textbf{3.5 Interfaz gráfica:}} Debe mostrar el estado de la bomba de riego.
+	\begin{itemize}
+		\item \textit{ \textbf{Verificación:}} N/A
+		
+		\item \textit{\textbf{Validación}}
+		\begin{itemize}
+			\item El cliente lo aprueba.
+		\end{itemize}
+	\end{itemize}
+	
+\end{itemize}					
+	
+	
+	
+
+
+%\begin{itemize}
+%\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
+%\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+%\end{itemize}
+
+%\end{itemize}
+
+%Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.
+
+%\end{consigna}
+
+\clearpage
 
 \section{14. Comunicación del proyecto}
 \label{sec:comunicaciones}
